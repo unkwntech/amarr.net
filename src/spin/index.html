@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Movie Selector</title>
+        <link href="spin.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <h1><center>Why can't Amarr fight today?</center><br>
+
+        <div id="mainbox" class="mainbox">
+            <div id="box" class="box">
+                <div class="box1">
+                    <span class="span1"><b>Being Blobbed (only 1:1 odds)</b></span>
+                    <span class="span2"><b>Day ends in "y"</b></span>
+                    <span class="span4"><b>Our comp is inferior</b></span>
+                    <span class="span3"><b>New diss track dropped 🔥</b></span>
+                </div>
+                <div class="box2">
+                    <span class="span1"><b>Too far off station</b></span>
+                    <span class="span2"><b>MULTIBOXERS!</b></span>
+                    <span class="span3"><b>Oops! Another reddit thread</b></span>
+                    <span class="span4"><b>Market Unstocked</b></span>
+                </div>
+            </div>
+
+            <button class="spin" onclick="spin()"><img src="amarr.png"/></button>
+        </div>
+
+        <div>
+            <center>Spin Count <span id="counter">0</span></center>
+        </div>
+
+        <script type="text/javascript">
+            function spin() {
+                var x = 1024; //min value
+                var y = 9999; // max value
+
+                var deg = Math.floor(Math.random() * (x - y)) + y;
+
+                document.getElementById("box").style.transform = "rotate(" + deg + "deg)";
+
+                var element = document.getElementById("mainbox");
+                element.classList.remove("animate");
+                setTimeout(function () {
+                    element.classList.add("animate");
+                }, 5000);
+            }
+
+            // Disabled because css r dum, me dumer
+            // (async () => {
+            //     fetch("./excuses.json").then(async (res) => {
+            //         const excuses = JSON.parse(await res.text());
+            //         for(let element of document.getElementsByTagName("span")) {
+            //             element.innerText = excuses.pop(Math.floor(Math.random()*excuses.length));
+            //         }
+            //     })
+            // })();
+
+        </script>
+    </body>
+</html>
