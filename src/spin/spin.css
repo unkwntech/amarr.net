@@ -148,3 +148,8 @@ button img {
     left: -4;
     top: 1;
 }
+
+.counter {
+    width: auto;
+    position: relative;
+}

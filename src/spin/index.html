@@ -4,31 +4,42 @@
         <link href="spin.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <h1>
+            <center>Why can't Amarr fight today?</center>
+            <br />
 
-        <h1><center>Why can't Amarr fight today?</center><br>
+            <div id="mainbox" class="mainbox">
+                <div id="box" class="box">
+                    <div class="box1">
+                        <span class="span1"
+                            ><b>Being Blobbed (only 1:1 odds)</b></span
+                        >
+                        <span class="span2"><b>Day ends in "y"</b></span>
+                        <span class="span4"><b>Our comp is inferior</b></span>
+                        <span class="span3"
+                            ><b>New diss track dropped 🔥</b></span
+                        >
+                    </div>
+                    <div class="box2">
+                        <span class="span1"><b>Too far off station</b></span>
+                        <span class="span2"><b>MULTIBOXERS!</b></span>
+                        <span class="span3"
+                            ><b>Oops! Another reddit thread</b></span
+                        >
+                        <span class="span4"><b>Market Unstocked</b></span>
+                    </div>
+                </div>
 
-        <div id="mainbox" class="mainbox">
-            <div id="box" class="box">
-                <div class="box1">
-                    <span class="span1"><b>Being Blobbed (only 1:1 odds)</b></span>
-                    <span class="span2"><b>Day ends in "y"</b></span>
-                    <span class="span4"><b>Our comp is inferior</b></span>
-                    <span class="span3"><b>New diss track dropped 🔥</b></span>
-                </div>
-                <div class="box2">
-                    <span class="span1"><b>Too far off station</b></span>
-                    <span class="span2"><b>MULTIBOXERS!</b></span>
-                    <span class="span3"><b>Oops! Another reddit thread</b></span>
-                    <span class="span4"><b>Market Unstocked</b></span>
-                </div>
+                <button class="spin" onclick="spin()">
+                    <img src="amarr.png" />
+                </button>
             </div>
-
-            <button class="spin" onclick="spin()"><img src="amarr.png"/></button>
-        </div>
-
-        <div>
-            <center>Spin Count <span id="counter">0</span></center>
-        </div>
+            <div style="padding-top: 20px">
+                <center>
+                    Spin Count <span id="counter" class="counter">0</span>
+                </center>
+            </div>
+        </h1>
 
         <script type="text/javascript">
             function spin() {
@@ -37,13 +48,17 @@
 
                 var deg = Math.floor(Math.random() * (x - y)) + y;
 
-                document.getElementById("box").style.transform = "rotate(" + deg + "deg)";
+                document.getElementById("box").style.transform =
+                    "rotate(" + deg + "deg)";
 
                 var element = document.getElementById("mainbox");
                 element.classList.remove("animate");
                 setTimeout(function () {
                     element.classList.add("animate");
                 }, 5000);
+
+                document.getElementById("counter").innerText =
+                    parseInt(document.getElementById("counter").innerText) + 1;
             }
 
             // Disabled because css r dum, me dumer
@@ -55,7 +70,6 @@
             //         }
             //     })
             // })();
-
         </script>
     </body>
 </html>
