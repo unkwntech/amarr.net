@@ -29,7 +29,7 @@
                         <span class="span4"><b>Market Unstocked</b></span>
                     </div>
                 </div>
-
+                <img src="clickme.png" class="clickme" id="clickme" />
                 <button class="spin" onclick="spin()">
                     <img src="amarr.png" />
                 </button>
@@ -43,6 +43,8 @@
 
         <script type="text/javascript">
             function spin() {
+                document.getElementById("clickme").style.display = "none";
+
                 var x = 1024; //min value
                 var y = 9999; // max value
 

@@ -153,3 +153,20 @@ button img {
     width: auto;
     position: relative;
 }
+
+.clickme {
+    width: 200;
+    position: absolute;
+    top: 120px;
+    left: 152px;
+    z-index: 2;
+    animation: animateClickMe 0.7s ease infinite;
+    filter: drop-shadow(2px 2px 2px #444444);
+}
+
+@keyframes animateClickMe {
+    50%{
+        top: 100px;
+    }
+    
+}
