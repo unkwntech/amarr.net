@@ -170,3 +170,10 @@ button img {
     }
     
 }
+
+.banner {
+    z-index: 400 !important;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
